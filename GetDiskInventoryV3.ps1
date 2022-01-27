@@ -1,5 +1,6 @@
 ﻿param (
-    $computername = 'localhost'
+    $computername = 'localhost',
+    $drivetype = 3
     )
 Get-WmiObject -Class Win32_LogicalDisk -ComputerName $computername `
     -Filter "drivetype=3" |
